@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 15px;
+}
+
+/* ================= HEART PULSE ================= */
+
+.pulse-heart {
+  font-size: 60px;
+  animation: heartbeat 1.3s infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  15%  { transform: scale(1.2); }
+  30%  { transform: scale(1); }
+  45%  { transform: scale(1.2); }
+  60%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+/* Romantic glow effect */
+.pulse-heart {
+  text-shadow:
+    0 0 10px rgba(255,77,109,0.8),
+    0 0 20px rgba(255,77,109,0.6),
+    0 0 40px rgba(255,77,109,0.4);
+}
+
+#formScreen {
+  display: none;
+}
+
+#countdownTimer {
+  font-family: 'Special Elite', monospace;
+  font-size: 22px;
+  margin-top: 20px;
+  color: #ff4d6d;
+  white-space: pre-line;
+}
+
+/* Romantic Form Font */
+#formScreen h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #ff4d6d;
+}
+
+#formScreen p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 20px;
+  color: #d6336c;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+#valentineScreen {
+  display: none;
+}
+
+.valentine-img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* ================= INPUT & BUTTON ================= */
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ffd6e0;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  touch-action: manipulation;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,77,109,0.4);
+}
+
+/* ================= SHAKE ================= */
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+/* ================= SMALL LOADER ================= */
+
+.loader {
+  display: none;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.loader span,
+.loader-content span {
+  font-size: 30px;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  50% { transform: scale(1.6); opacity: 1; }
+}
+
+/* ================= FULLSCREEN LOADER ================= */
+
+.fullscreen-loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-content {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.loader-text {
+  font-family: 'Special Elite', monospace;
+  font-size: 22px;
+  color: white;
+}
+
+/* ================= TYPEWRITER ================= */
+
+.typewriter-font {
+  font-family: 'Special Elite', monospace;
+  white-space: pre-line;
+  position: relative;
+}
+
+.typewriter-font::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ================= FINAL BUTTON ================= */
+
+.final-btn {
+  display: none;
+}
+
+/* ================= FADE ================= */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+@keyframes fadeIn { to { opacity:1; } }
+@keyframes fadeOut { to { opacity:0; } }
+
+/* ================= CONFETTI ================= */
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh) rotate(720deg); }
+}
+
+/* ================= LOVE LETTER ================= */
+
+.letter {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: openLetter 0.6s forwards;
+}
+
+@keyframes openLetter {
+  to { transform: scaleY(1); }
+}
+
+.letter-content {
+  opacity: 0;
+  animation: fadeIn 0.6s 0.6s forwards;
+}
+
+.final-surprise-img {
+  animation: popIn 0.6s ease forwards;
+  transform: scale(0.8);
+  opacity: 0;
+  margin-bottom: 20px;
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .card {
+    padding: 25px;
+  }
+
+  #formScreen h1 {
+    font-size: 30px;
+  }
+
+  #formScreen p {
+    font-size: 18px;
+  }
+
+  .typewriter-font {
+    font-size: 16px;
+  }
+
+  .loader-text {
+    font-size: 18px;
+  }
+}

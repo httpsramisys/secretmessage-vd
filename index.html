@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Special+Elite&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- COUNTDOWN SCREEN -->
+<div class="card" id="countdownScreen">
+  <div class="pulse-heart">💖</div>
+
+  <h1 class="romantic-title">
+    Something Special Is Coming
+  </h1>
+
+  <p id="countdownTimer"></p>
+</div>
+
+  <!-- ================= FORM SCREEN ================= -->
+  <div class="card" id="formScreen">
+    <h1>💌 Valentine Form</h1>
+    <p>Enter your name to receive some love</p>
+
+    <input type="text" id="nameInput" placeholder="Your name 💕">
+    <button onclick="showLove()">Send Love</button>
+
+    <div class="loader" id="loader">
+      <span>💗</span>
+      <span>💗</span>
+      <span>💗</span>
+    </div>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- ================= VALENTINE SCREEN ================= -->
+  <div class="card" id="valentineScreen">
+    <img src="img/valentine.jpeg" class="valentine-img" id="valentineImage">
+
+    <h1 id="valentineQuestion">💖 Will you be my Valentine?</h1>
+
+    <p id="blackmailText" class="blackmail-text"></p>
+
+    <div id="valentineButtons">
+      <button onclick="sayYes()">Yes 💕</button>
+      <button onclick="sayNo()">No 😢</button>
+    </div>
+
+    <button id="finalButton" class="final-btn" onclick="continueLove()">
+      Continue 💌
+    </button>
+  </div>
+
+  <!-- ================= FULLSCREEN LOADER ================= -->
+  <div id="finalLoader" class="fullscreen-loader">
+    <div class="loader-content">
+      <span>💖</span>
+      <span>💖</span>
+      <span>💖</span>
+    </div>
+    <p id="loaderText" class="loader-text"></p>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
