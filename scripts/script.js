@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // 🔧 Toggle this for testing
-  const testingMode = false; // change to true to test
+  const testingMode = true; // change to true to test
 
   const releaseDate = testingMode
     ? new Date(Date.now() + 60000).getTime() // 1 minute test
